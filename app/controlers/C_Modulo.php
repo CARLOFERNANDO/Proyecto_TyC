@@ -22,7 +22,6 @@
             if($_SERVER["REQUEST_METHOD"]=="POST"){
                 $datos= [
                     "n_mod"=> trim($_POST["nombre"]),
-                    "op_ocup_mod"=> trim($_POST["opcion-ocupacional"]),
                     "durac_mod"=> trim($_POST["duracion"])
                 ];
                 //se ejecuta el agregado y t direcciona a las paginas

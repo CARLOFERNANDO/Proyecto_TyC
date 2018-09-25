@@ -33,7 +33,7 @@
 
 					<li><a href="">Modulos</a>
 						<ul>
-                    		<li><a href="modulos.php">Registrar</a></li>
+                    		<li><a href="<?php echo RUTA_URL; ?>C_Modulo/agregar">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
                     		<li><a href="#">Modificar</a></li>
                     		<li><a href="#">Reportes</a></li>

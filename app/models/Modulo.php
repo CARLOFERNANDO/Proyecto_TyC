@@ -3,7 +3,7 @@
         private $bd;
 
         function __construct(){
-            $this->$bd=new Conexion();
+            $this->bd=new Conexion();
         }
         function agregarModulos($datos){
             // Modulo(_,_,_,_,_) son todos o solo unos cuantos?
