@@ -29,7 +29,7 @@
                 ];
                 //se ejecuta el agregado y t direcciona a las paginas
                 if($this->moduloModelo->agregarModulos($datos)){
-                    redireccionar("C_Modulo"); 
+                    redireccionar("C_Modulo/agregar"); 
                     /**
                      * Al principio es paginas , pero se necesita direccionar asi mismo para que
                      * ingrese al index y lo direccione a vista
@@ -39,8 +39,11 @@
                 }
             }else{ // por get y los datos seran vaciois
                 $datos = [
-                    "n_nombre"=>" ",
-                    "n_profe"=>" "
+                    "n_mod"=> " ",
+                    "op_ocup_mod"=> " ",
+                    //"fech_ini_mod"=> " ",
+                    //"fech_fin_mod"=> " ",
+                    "durac_mod"=> " "
                 ];
                 //cambiamos paginas/agregar
                 $this->vistas("paginas/modulos",$datos);
