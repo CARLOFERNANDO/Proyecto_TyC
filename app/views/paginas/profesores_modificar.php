@@ -12,7 +12,7 @@
 				<ul class="clearfix">
 					<li><a href="<?php echo RUTA_URL; ?>paginas">Inicio</a></li>
 
-					<li><a href="#">Alumnos</a>
+					<li><a href="">Alumnos</a>
 						<ul>
                     		<li><a href="alumnos.php">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
@@ -21,16 +21,16 @@
                   		</ul>
 					</li>
 
-					<li><a class="enlace-activo" href="#">Profesores</a>
+					<li><a class="enlace-activo" href="">Profesores</a>
 						<ul>
-                    		<li><a href="profesores_registrar.php">Registrar</a></li>
+                    		<li><a href="<?php echo RUTA_URL; ?>paginas/agregar">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
-                    		<li><a href="profesores_buscar.php">Modificar</a></li>
+                    		<li><a href="<?php echo RUTA_URL; ?>paginas/buscar">Modificar</a></li>
                     		<li><a href="#">Reportes</a></li>
                   		</ul>
 					</li>
 
-					<li><a href="#">Modulos</a>
+					<li><a href="">Modulos</a>
 						<ul>
                     		<li><a href="modulos.php">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
@@ -39,7 +39,7 @@
                   		</ul>
 					</li>
 
-					<li><a href="#">Opciones</a>
+					<li><a href="">Opciones</a>
 						<ul>
                     		<li><a href="opciones.php">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
@@ -48,7 +48,7 @@
                   		</ul>
 					</li>
 
-					<li><a href="#">Familias</a>
+					<li><a href="">Familias</a>
 						<ul>
                     		<li><a href="#">Registrar</a></li>
                     		<li><a href="#">Eliminar</a></li>
@@ -57,7 +57,7 @@
                   		</ul>
 					</li>
 
-					<li><a href="#">Matricula</a></li>
+					<li><a href="">Matricula</a></li>
 				</ul>
 			</nav>
 		</div>

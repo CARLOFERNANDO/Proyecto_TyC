@@ -22,16 +22,15 @@
                 'titulo'=> 'Bienvenidos a Sistema de Matricula'
             ];
             
-            $this->vistas("paginas/inicio2",$datos);
+            $this->vistas("paginas/inicio",$datos);
         }
         
         public function agregar(){
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 $datos = [
-                'id' => trim($_POST['id']),
-                'nombre' => trim($_POST['nombre']),
-                'apeP' => trim($_POST['apeP']),
-                'apeM' => trim($_POST['apeM']),
+                'nombre' => trim($_POST['nombres']),
+                'apeP' => trim($_POST['apellido-paterno']),
+                'apeM' => trim($_POST['apellido-materno']),
                 'sexo' => trim($_POST['sexo']),
                 'edad' => trim($_POST['edad'])
                 
@@ -80,9 +79,8 @@
                 //este bloque se carga ni bien se da click en el enlace y hasta que se presiona el boton
                 //obtener informacion de profesor desde modelo 
                 $profesor = $this->profesorModelo->obtenerProfesorID($id);
-                
                 $datos = [
-                    'id' => $profesor->idProf,
+                    'id' => $profesor->idprof,
                     'nombre' => $profesor->nombre,
                     'apeP' => $profesor->apePaterno,
                     'apeM' => $profesor->apeMaterno,
@@ -90,7 +88,7 @@
                     'edad' => $profesor->edadProf
                 ];
                 
-                $this->vistas('/paginas/profesores_modificar', $datos);
+                $this->vistas('paginas/profesores_modificar', $datos);
             }
         }
         
@@ -100,7 +98,7 @@
                 $profesor = $this->profesorModelo->obtenerProfesorID($id);
                 
                 $datos = [
-                    'id' => $profesor->idProf,
+                    'id' => $profesor->idprof,
                     'nombre' => $profesor->nombre,
                     'apeP' => $profesor->apePaterno,
                     'apeM' => $profesor->apeMaterno,

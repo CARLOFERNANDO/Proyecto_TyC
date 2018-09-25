@@ -13,10 +13,9 @@
         }
         
         public function agregarProfesor($datos){
-            $this->db->query('INSERT INTO PROFESOR VALUES (:IDPROF, :NOMBRE, :APEP, :APEM, :SEXO, :EDAD)');
+            $this->db->query('INSERT INTO PROFESOR (NOMBRE, APEPATERNO, APEMATERNO, SEXOPROF, EDADPROF) VALUES (:NOMBRE, :APEP, :APEM, :SEXO, :EDAD)');
             
             //Vincular los valores
-            $this->db->bind(':IDPROF', $datos['id']);
             $this->db->bind(':NOMBRE', $datos['nombre']);
             $this->db->bind(':APEP', $datos['apeP']);
             $this->db->bind(':APEM', $datos['apeM']);
