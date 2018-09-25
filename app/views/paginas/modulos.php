@@ -69,7 +69,7 @@
 				<h2>Operaciones para <span>Módulos</span></h2>
 			</div>
 
-			<form class="formulario" action="">
+			<form class="formulario" action="<?php echo RUTA_URL;?>C_Modulo/agregar" method="POST">
 				<label class="titulo-label">Nombre del módulo:</label>
 				<input class="input" type="text" name="nombre" placeholder="Nombre del Módulo" required autofocus>
 				<br>
