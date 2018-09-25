@@ -23,8 +23,6 @@
                 $datos= [
                     "n_mod"=> trim($_POST["nombre"]),
                     "op_ocup_mod"=> trim($_POST["opcion-ocupacional"]),
-                    //"fech_ini_mod"=> trim($_POST["fecha-inicio"]),
-                    //"fech_fin_mod"=> trim($_POST["fecha-fin"]),
                     "durac_mod"=> trim($_POST["duracion"])
                 ];
                 //se ejecuta el agregado y t direcciona a las paginas
@@ -40,9 +38,6 @@
             }else{ // por get y los datos seran vaciois
                 $datos = [
                     "n_mod"=> " ",
-                    "op_ocup_mod"=> " ",
-                    //"fech_ini_mod"=> " ",
-                    //"fech_fin_mod"=> " ",
                     "durac_mod"=> " "
                 ];
                 //cambiamos paginas/agregar
