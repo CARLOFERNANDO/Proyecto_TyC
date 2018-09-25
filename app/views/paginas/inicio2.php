@@ -12,7 +12,7 @@
 		<div class="navegacion">
 			<nav>
 				<ul class="clearfix">
-					<li><a class="enlace-activo" href="index.php">Inicio</a></li>
+					<li><a class="enlace-activo" href="<?php echo RUTA_URL; ?>paginas">Inicio</a></li>
 
 					<li><a href="#">Alumnos</a>
 						<ul>

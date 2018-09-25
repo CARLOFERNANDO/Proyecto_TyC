@@ -10,7 +10,7 @@
 		<div class="navegacion">
 			<nav>
 				<ul class="clearfix">
-					<li><a href="index.php">Inicio</a></li>
+					<li><a href="<?php echo RUTA_URL; ?>paginas">Inicio</a></li>
 
 					<li><a href="#">Alumnos</a>
 						<ul>
@@ -71,33 +71,33 @@
 
 			<?php
 
-					include("conexion.php");
+				/*	include("conexion.php");
 					$id = $_POST['id'];
 					$query = "SELECT * from profesores WHERE id = '$id'";
 					$resultado = $conexion->query($query) or die($conexion->error);
-					$row = $resultado->fetch_assoc();
+					$row = $resultado->fetch_assoc();  */
 
 			?>
 
-			<form class="formulario" action="profesor_modificar_metodo.php?id=<?php echo $row['id']; ?>" method="POST">
+			<form class="formulario" action="<?php echo RUTA_URL ?>/paginas/editar/<?php echo $datos['id']?>" method="POST">
 
 
 
 				<label class="titulo-label">Nombres del Profesor:</label>
-				<input class="input" type="text" name="nombres" value="<?php echo $row['nombres'] ?>" required autofocus>
+				<input class="input" type="text" name="nombres" value="<?php echo $datos['nombre'] ?>" required autofocus>
 				<br>
 
 				<label class="titulo-label">Apellido Paterno:</label>
-				<input class="input" type="text" name="apellido-paterno" value="<?php echo $row['apellido_paterno'] ?>" required>
+				<input class="input" type="text" name="apellido-paterno" value="<?php echo $datos['apeP'] ?>" required>
 				<br>
 
 				<label class="titulo-label">Apellido Materno:</label>
-				<input class="input" type="text" name="apellido-materno" value="<?php echo $row['apellido_materno'] ?>" required>
+				<input class="input" type="text" name="apellido-materno" value="<?php echo $datos['apeM'] ?>" required>
 				<br>
 				
 				<?php
 
-					if($row['sexo'] == "masculino"){
+					if($datos['sexo'] == "masculino"){
 				?>
 
 				<label class="titulo-label">Sexo:</label>
@@ -123,8 +123,9 @@
 				?>
 				<br>
 
-				<label class="titulo-label">Fecha de nacimiento:</label>
-				<input class="input" type="date" name="fecha-nacimiento" value="<?php echo $row['fecha_nacimiento'] ?>" required>
+				<label class="titulo-label">Edad:</label>
+				<input class="input" type="text" name="edad" value="<?php echo $datos['edad'] ?>" required>
+		<!--		<input class="input" type="date" name="fecha-nacimiento" value="<?php echo $datos['edad'] ?>" required>    -->
 				<br>
 
 				<div class="botones">

@@ -6,20 +6,20 @@
         }
         
         public function buscar(){
+            $profesores = $this->profesorModelo->listarProfesores();
+            
             $datos = [
-                'titulo' => 'sdfsdf'
+                'titulo'=> 'Bienvenidos a Sistema de Matricula',
+                'profesores' => $profesores
             ];
                 
             $this->vistas('/paginas/profesores_buscar', $datos);
         }
 
         public function index(){
-
-            $profesores = $this->profesorModelo->listarProfesores();
             
             $datos = [
-                'titulo'=> 'Bienvenidos a Sistema de Matricula',
-                'profesores' => $profesores
+                'titulo'=> 'Bienvenidos a Sistema de Matricula'
             ];
             
             $this->vistas("paginas/inicio2",$datos);
@@ -62,9 +62,9 @@
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 $datos = [
                 'id' => $id,
-                'nombre' => trim($_POST['nombre']),
-                'apeP' => trim($_POST['apeP']),
-                'apeM' => trim($_POST['apeM']),
+                'nombre' => trim($_POST['nombres']),
+                'apeP' => trim($_POST['apellido-paterno']),
+                'apeM' => trim($_POST['apellido-materno']),
                 'sexo' => trim($_POST['sexo']),
                 'edad' => trim($_POST['edad'])
                 
@@ -90,7 +90,7 @@
                     'edad' => $profesor->edadProf
                 ];
                 
-                $this->vista('/paginas/profesores_modificar', $datos);
+                $this->vistas('/paginas/profesores_modificar', $datos);
             }
         }
         

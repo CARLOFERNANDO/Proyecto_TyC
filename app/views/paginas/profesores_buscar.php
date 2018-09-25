@@ -11,7 +11,7 @@
 		<div class="navegacion">
 			<nav>
 				<ul class="clearfix">
-					<li><a href="index.php">Inicio</a></li>
+					<li><a href="<?php echo RUTA_URL; ?>paginas">Inicio</a></li>
 
 					<li><a href="#">Alumnos</a>
 						<ul>
@@ -70,44 +70,33 @@
 				<h2>Buscar nombre del <span>Profesor </span> a modificar</h2>
 			</div>
 
-			<form class="formulario" action="profesores_modificar.php" method="POST">
+			<form class="formulario" action="" method="POST">
 				<label class="titulo-label">Nombres del Profesor:</label>
 				<select class="input" name="id" required autofocus>
-					<?php 
-						$query = $mysqli -> query ("SELECT * FROM PROFESORES ORDER BY APELLIDO_PATERNO");
-						
-						while($valores = mysqli_fetch_array($query)){
-							echo '<option value="'.$valores[id].'">'.$valores[apellido_paterno].' '.$valores[apellido_materno].', '.$valores[nombres].'</option>';
-						}
+					<?php     
+                        foreach($datos['profesores'] as $prof):
+                    
+                            echo '<option value="'.$prof->idProf.'">'.$prof->apePaterno.' '.$prof->apeMaterno.', '.$prof->nombre.'</option>';                       
+                    
+                        endforeach;
 					?>
 				</select>
-				<br>
-
-				<!-- <label class="titulo-label">Apellido Paterno:</label>
-				<input class="input" type="text" name="apellido-paterno" value="'.$valores[apellido-paterno].'" required>
-				<br>
-
-				<label class="titulo-label">Apellido Materno:</label>
-				<input class="input" type="text" name="apellido-materno" placeholder="Apellido Materno" required>
-				<br>
 				
-
-				<label class="titulo-label">Sexo:</label>
-				<select class="input" name="sexo">
-					<option value="masculino" selected="">Masculino</option>
-					<option value="femenino">Femenino</option>
-				</select>
 				<br>
-
-
-				<label class="titulo-label">Fecha de nacimiento:</label>
-				<input class="input" type="date" name="fecha-nacimiento" placeholder="DD/MM/AAAA" required>
-				<br> -->
 
 				<div class="botones">
-					<input class="boton-buscar" type="submit" value="Buscar">
+					<input class="boton-buscar" type="submit" value="Buscare" name="button" id="button" onClick="prueba">
 				</div>
-			</form>	
+			</form>
+			<?php
+                    if(isset($_POST["button"])){
+                        $id = $_POST['id'];
+                        redireccionar('paginas/editar/'.$id);
+                    }else{
+                        echo " ";
+                    }
+                
+            ?>
 		</main>
 
 		<aside>
