@@ -74,14 +74,6 @@
 				<input class="input" type="text" name="nombre" placeholder="Nombre del Módulo" required autofocus>
 				<br>
 				
-
-				<label class="titulo-label">Opción Ocupcional:</label>
-				<select class="input" name="opcion-ocupacional">
-					<option value="matutino" selected="">Opción Ocupacional 1</option>
-					<option value="nocturno">Opción Ocupacional 2</option>
-				</select>
-				<br>
-
 				<label class="titulo-label">Duracion en horas:</label>
 				<input class="input" type="number" name="duracion" placeholder="Ej. 300" required>
 				<br>
