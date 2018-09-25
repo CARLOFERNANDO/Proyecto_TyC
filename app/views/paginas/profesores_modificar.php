@@ -97,7 +97,7 @@
 				
 				<?php
 
-					if($datos['sexo'] == "masculino"){
+					if($datos['sexo'] == "m"){
 				?>
 
 				<label class="titulo-label">Sexo:</label>
