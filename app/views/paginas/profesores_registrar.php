@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-	
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>CETPRO Margarita Gonzales de Dankers</title>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/estilos.css">
-	</head>
-
-	<body>
-
+<?php require_once(RUTA_APP."/views/inc/Header.php"); ?>
 		<header>
 			<div class="contenedor">
 				<div class="logo">
-				    <img src="img/logo.png" width="380">
+				    <img src="<?php echo RUTA_URL; ?>/img/logo.png" width="380">
 				</div>
 			</div>
 		</header>
