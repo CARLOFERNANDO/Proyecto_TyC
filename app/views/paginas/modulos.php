@@ -82,15 +82,6 @@
 				</select>
 				<br>
 
-
-				<label class="titulo-label">Fecha de inicio:</label>
-				<input class="input" type="date" name="fecha-inicio" placeholder="DD/MM/AAAA" required>
-				<br>
-
-				<label class="titulo-label">Fecha de fin:</label>
-				<input class="input" type="date" name="fecha-fin" placeholder="DD/MM/AAAA" required>
-				<br>
-
 				<label class="titulo-label">Duracion en horas:</label>
 				<input class="input" type="number" name="duracion" placeholder="Ej. 300" required>
 				<br>
