@@ -257,8 +257,48 @@
 
             <div class="contenido-main">
                 <div class="titulo-formulario">
-                    <h2>Bienvenido, revisa nuestras <span>Novedades</span> para hoy</h2>
+                    <h2>Registrar <span>Módulo</span></h2>
                 </div>
+
+                <form>
+ 
+                    <div class="form-group">
+                        <label class="titulo-label">Nombre del Módulo</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre del módulo" required autofocus>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label class="titulo-label">Opción ocupacional</label>                            
+                        <select  class="form-control" name="opcion-ocupacional">
+                            <option value="opcion1" selected>Opción ocupacional 1</option>
+                            <option value="opcion2">Opción ocupacional 2</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Fecha de inicio</label>
+                            <input type="date" class="form-control" name="fecha-inicio" placeholder="DD/MM/AAAA" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Fecha de fin</label>
+                            <input type="date" class="form-control" name="fecha-fin" placeholder="DD/MM/AAAA" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Duración en horas</label>
+                            <input type="number" class="form-control" name="duración" placeholder="Ej. 300" required>
+                        </div>
+                    </div>
+
+
+                    <div class="botones">
+                        <button type="submit" class="btn boton-registrar btn-success col-xs-4">Registrar</button>
+                        <button type="reset" class="btn boton-limpiar btn-warning col-xs-4">Limpiar</button>
+                    </div>
+
+                </form>
             </div>
         </main>
         <!-- page-content" -->

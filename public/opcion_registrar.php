@@ -257,8 +257,30 @@
 
             <div class="contenido-main">
                 <div class="titulo-formulario">
-                    <h2>Bienvenido, revisa nuestras <span>Novedades</span> para hoy</h2>
+                    <h2>Registrar <span>Opción Ocupacional</span></h2>
                 </div>
+
+                <form>
+ 
+                    <div class="form-group">
+                        <label class="titulo-label">Nombre de la Opción Ocupacional</label>
+                        <input type="text" class="form-control" name="nombre"  required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="titulo-label">Familia profesional</label>
+                        <select  class="form-control" name="familia">
+                            <option value="familia1" selected>Familia 1</option>
+                            <option value="familia2">Familia 2</option>
+                        </select>
+                    </div>
+                        
+                    <div class="botones">
+                        <button type="submit" class="btn boton-registrar btn-success col-xs-4">Registrar</button>
+                        <button type="reset" class="btn boton-limpiar btn-warning col-xs-4">Limpiar</button>
+                    </div>
+
+                </form>
             </div>
         </main>
         <!-- page-content" -->

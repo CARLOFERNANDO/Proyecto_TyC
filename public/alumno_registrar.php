@@ -257,8 +257,125 @@
 
             <div class="contenido-main">
                 <div class="titulo-formulario">
-                    <h2>Bienvenido, revisa nuestras <span>Novedades</span> para hoy</h2>
+                    <h2>Registrar <span>Alumno</span></h2>
                 </div>
+
+                <form>
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Nombres</label>
+                                <input type="text" class="form-control" name="nombres" required autofocus>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" name="apellido-paterno" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Apellido Materno</label>
+                                <input type="text" class="form-control" name="apellido-materno" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="titulo-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" name="fecha-nacimiento" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="titulo-label">Sexo</label>                            
+                                <select  class="form-control" name="sexo">
+                                    <option value="masculino" selected>Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <br>
+
+
+                    <fieldset>
+                        <legend>Datos Adicionales y de contacto</legend>
+                        <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Estado Civil</label>                            
+                            <select  class="form-control" name="estado-civil">
+                                <option value="soltero" selected>Soltero</option>
+                                <option value="casado">Casado</option>
+                                <option value="viudo">Viudo</option>
+                                <option value="divorciado">Divorciado</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Grado de Instrucción</label>                            
+                            <select  class="form-control" name="grado-instruccion">
+                                <option value="secundaria" selected>Secundaria completa</option>
+                                <option value="tecnico">Estudios técnicos</option>
+                                <option value="superior">Estudios superiores</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="titulo-label">Ocupación</label>                            
+                            <select  class="form-control" name="ocupacion">
+                                <option value="opcion1" selected>Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">           
+                        <div class="form-group col-md-6">
+                            <label class="titulo-label">Número de celular</label>
+                            <input type="number" class="form-control" name="numero" placeholder="Ej. 99999999" required>                       
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="titulo-label">Correo electrónico</label>                            
+                            <input type="email" class="form-control" name="email" placeholder="Ej. nombre@dominio.com" required>
+                        </div>
+                    </div>
+                    </fieldset>
+                    <br>
+                    <br>
+                    
+                    <fieldset >
+                        <legend>Dirección</legend>
+                        <div class="form-group">
+                            <label class="titulo-label">Domicilio</label>
+                            <input type="text" class="form-control" name="domicilio" required>                       
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Distrito</label>                            
+                                <select  class="form-control" name="distrito">
+                                    <option value="distrito1" selected>Distrito 1</option>
+                                    <option value="distrito2">Distrito 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Provincia</label>                            
+                                <select  class="form-control" name="provincia">
+                                    <option value="provincia1" selected>Provincia 1</option>
+                                    <option value="provincia2">Provincia 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="titulo-label">Provincia</label>                            
+                                <select  class="form-control" name="departamento">
+                                    <option value="departamento1" selected>Departamento 1</option>
+                                    <option value="departamento2">Departamento2 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="botones">
+                        <button type="submit" class="btn boton-registrar btn-success col-xs-4">Registrar</button>
+                        <button type="reset" class="btn boton-limpiar btn-warning col-xs-4">Limpiar</button>
+                    </div>
+                </form>
             </div>
         </main>
         <!-- page-content" -->
